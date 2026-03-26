@@ -1,6 +1,9 @@
 $(document).ready(function() {
     var arrCourse = [];
 
+    var mensagemCumprimento = fnMensagemCumprimento();
+    $('#mensagem_cumprimento').append(mensagemCumprimento);
+
     var domainName = 'https://agendamento.cidex.eb.mil.br';
     var serverUrl = domainName + '/webservice/rest/server.php';
     var token = '9a0642f4172064d5a35643311abfcecb';

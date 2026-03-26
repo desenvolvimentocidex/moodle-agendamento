@@ -13,3 +13,15 @@
     </head>
     
     <body>
+        <div class="flex-header">
+            <div class="flex-header-item"><?= TITLE; ?></div>
+
+            <div class="flex-header-item">
+                <span id="mensagem_cumprimento"></span>
+            </div>
+        </div>
+
+        <div class="flex-header-logo">
+            <img src="<?= BASE_URL; ?>/assets/images/logotipo_cidex.png" alt="Logotipo do Centro de Idiomas do Exército">
+            <img src="<?= BASE_URL; ?>/assets/images/logotipo_exercito.png" alt="Logotipo do Exército Brasileiro">
+        </div>
