@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "d13ea19c-fda7-430c-ab2f-d507faeb4b45",
+		"name": "API MOODLE (AGENDAMENTO CIDEX)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48182054",
+		"_collection_link": "https://desenvolvimento-cidex-1183445.postman.co/workspace/CIDEX-Centro-de-Idiomas-do-Ex%C3%A9r~92769804-c0c4-4ba3-87a4-b81f038e865e/collection/48182054-d13ea19c-fda7-430c-ab2f-d507faeb4b45?action=share&source=collection_link&creator=48182054"
+	},
+	"item": [
+		{
+			"name": "core_user_get_users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://agendamento.cidex.eb.mil.br/webservice/rest/server.php?wstoken=9a0642f4172064d5a35643311abfcecb&wsfunction=core_user_get_users&moodlewsrestformat=json&criteria[0][key]=email&criteria[0][value]=%",
+					"protocol": "https",
+					"host": [
+						"agendamento",
+						"cidex",
+						"eb",
+						"mil",
+						"br"
+					],
+					"path": [
+						"webservice",
+						"rest",
+						"server.php"
+					],
+					"query": [
+						{
+							"key": "wstoken",
+							"value": "9a0642f4172064d5a35643311abfcecb"
+						},
+						{
+							"key": "wsfunction",
+							"value": "core_user_get_users"
+						},
+						{
+							"key": "moodlewsrestformat",
+							"value": "json"
+						},
+						{
+							"key": "criteria[0][key]",
+							"value": "email"
+						},
+						{
+							"key": "criteria[0][value]",
+							"value": "%"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
