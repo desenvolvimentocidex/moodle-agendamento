@@ -68,7 +68,17 @@
 }
 
 .flex-mt-20 { margin-top: 20px; }
+
+.flex-mb-10 { margin-bottom: 10px; }
 .flex-mb-20 { margin-bottom: 20px; }
+
+.flex-card-title {
+    padding: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    border-radius: 6px;
+}
 
 .flex-underline {
     margin: 0;

@@ -57,7 +57,7 @@ function fnRetornarTotalInscritos(course) {
     }
 
     var html = '';
-    var divRelatorios = document.getElementById('div_relatorios');
+    var divRelatoriosInscritos = document.getElementById('div_relatorios_inscritos');
 
     $.ajax({
         type: 'POST',
@@ -66,7 +66,7 @@ function fnRetornarTotalInscritos(course) {
         dataType: "json",
         beforeSend: function() {
             console.log('Carregando...');
-            divRelatorios.innerHTML = 'Carregando...';
+            //divRelatoriosInscritos.innerHTML = 'Carregando...';
         },
         success: function(data) {
             var dataValues = data.filter(function(a) {
@@ -78,26 +78,20 @@ function fnRetornarTotalInscritos(course) {
             console.log(course.courseName);
 
             if (dataValues.length > 0) {
-                html += '<div class="row">';
-                    html += '<div class="col-6">';
-                        html += '<ul class="list-group">';
-                            html += '<li class="list-group-item d-flex justify-content-between align-items-start">';
-                                html += '<div class="ms-2 me-auto">';
-                                    html += '<div class="fw-bold">' + course.courseName + '</div>';
-                                html += '</div>';
+                html += '<ul class="list-group flex-mb-10">';
+                    html += '<li class="list-group-item d-flex justify-content-between align-items-start">';
+                        html += '<div class="ms-2 me-auto">';
+                            html += '<div class="fw-bold">' + course.courseName + '</div>';
+                        html += '</div>';
 
-                                html += '<span class="badge text-bg-primary rounded-pill">' + dataValues.length + '</span>';
-                            html += '</li>';
-                        html += '</ul>';
-
-                        html += '<br>';
-                    html += '</div>';
-                html += '</div>';
+                        html += '<span class="badge text-bg-primary rounded-pill">' + dataValues.length + '</span>';
+                    html += '</li>';
+                html += '</ul>';
             } else {
                 html += '<div class="alert alert-danger" role="alert">Nenhum registro encontrado.</div>';
             }
-            
-            divRelatorios.innerHTML += html;
+
+            divRelatoriosInscritos.innerHTML += html;
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.error("AJAX Error: ", errorThrown);
